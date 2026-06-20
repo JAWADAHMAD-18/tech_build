@@ -85,8 +85,8 @@ export default function Footer() {
               <Code2 className="w-5 h-5" />
             </div>
             <span className="flex text-xl font-bold tracking-tight">
-              <span className="text-white">Tech</span>
-              <span className="text-green-light">Builds</span>
+              <span className="text-white">Zal</span>
+              <span className="text-green-light">Vro</span>
             </span>
           </Link>
           <p className="text-gray-400 text-sm mt-4 leading-relaxed">
@@ -114,7 +114,7 @@ export default function Footer() {
               <LinkedinIcon className="w-4 h-4" />
             </button>
             <button
-              onClick={() => handleSocialClick('https://Zalvro.dev')}
+              onClick={() => handleSocialClick('https://Zalvro.com')}
               className="border border-gray-600 rounded-lg p-2 hover:border-green-dark text-gray-400 hover:text-green-light transition-all focus:outline-none"
               aria-label="Website"
             >

@@ -44,7 +44,7 @@ export default function Contact() {
   return (
     <main className="overflow-x-hidden bg-cream">
       {/* SECTION 1 — HEADER */}
-      <section className="py-16 bg-subtle px-6">
+      <section className="py-10 bg-subtle px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -88,7 +88,7 @@ export default function Contact() {
                 <div>
                   <h4 className="font-semibold text-charcoal text-sm">Email Us</h4>
                   <a
-                    href="mailto:hello@Zalvro.dev"
+                    href="mailto:contact@Zalvro.com"
                     className="text-gray-500 text-sm mt-0.5 hover:underline"
                   >
                     hello@Zalvro.dev
@@ -234,8 +234,8 @@ export default function Contact() {
                   required
                   className="bg-cream border border-gray-200 rounded-xl p-3 focus:border-green-dark outline-none text-charcoal text-sm transition-colors cursor-pointer"
                 >
-                  <option value="Under $500">Under $500</option>
-                  <option value="$500-$1000">$500 - $1,000</option>
+                  <option value="Under $500">Under $300</option>
+                  <option value="$500-$1000">$300 - $1,000</option>
                   <option value="$1000-$2000">$1,000 - $2,000</option>
                   <option value="$2000+">$2,000+</option>
                 </select>

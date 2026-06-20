@@ -46,7 +46,7 @@ export default function About() {
   return (
     <main className="overflow-x-hidden bg-cream">
       {/* SECTION 1 — HERO */}
-      <section ref={heroRef} className="py-20 bg-subtle px-6">
+      <section ref={heroRef} className="py-10 bg-subtle px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isHeroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}

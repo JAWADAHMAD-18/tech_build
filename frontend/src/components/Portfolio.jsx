@@ -23,7 +23,7 @@ export default function Portfolio() {
   }
 
   return (
-    <section ref={sectionRef} className="bg-cream py-20 px-4">
+    <section ref={sectionRef} className="bg-cream py-10 px-4">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -65,6 +65,8 @@ export default function Portfolio() {
                 <img
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
+                  decoding="async"
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                 />
 

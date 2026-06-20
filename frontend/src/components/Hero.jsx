@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, CheckCircle, Zap, Code } from 'lucide-react'
+import { ArrowRight, CheckCircle, Zap, Code, Users, Globe, MessageCircle } from 'lucide-react'
 
 export default function Hero() {
   const navigate = useNavigate()
@@ -98,6 +98,31 @@ export default function Hero() {
             </button>
           </motion.div>
 
+          {/* Quick Chat Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.75 }}
+            className="mt-8 border-t border-gray-200 pt-6 flex items-center gap-4 w-full"
+          >
+            <div className="flex-1">
+              <h4 className="text-sm font-semibold text-charcoal">Got a project in mind?</h4>
+              <p className="text-xs text-gray-400 mt-0.5">Let's have a quick 5 min chat</p>
+            </div>
+            <div className="relative">
+              {/* Pulse ring animation around button */}
+              <span className="absolute inset-0 rounded-xl bg-[#25D366] animate-ping opacity-25" />
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                onClick={() => window.open('https://wa.me/923037741461', '_blank')}
+                className="relative z-10 bg-[#25D366] text-white rounded-xl px-5 py-2.5 text-sm font-medium flex items-center gap-2 shadow-sm hover:shadow-md transition-shadow duration-300"
+              >
+                <MessageCircle className="w-4 h-4 text-white" />
+                Quick 5 Min Chat
+              </motion.button>
+            </div>
+          </motion.div>
+
           {/* Stats Row */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
@@ -123,20 +148,21 @@ export default function Hero() {
         </div>
 
         {/* Right Column - Floating Cards Visual */}
-        <div className="relative flex items-center justify-center h-[400px] w-full max-w-[450px] mx-auto lg:max-w-none">
-          {/* Background decoration: Large blur circle */}
-          <div className="absolute w-72 h-72 rounded-full bg-[#90E4A1]/20 blur-3xl -z-10" />
+        <div className="relative h-[600px] w-full max-w-[500px] mx-auto lg:max-w-none">
+          {/* Background decoration: Large circle behind cards */}
+          <div className="absolute w-80 h-80 rounded-full bg-[#90E4A1]/10 top-[10%] left-[20%] -z-10" />
 
           {/* Small scattered decorative dots */}
-          <span className="absolute top-10 left-12 w-3 h-3 rounded-full bg-green-dark/80 animate-pulse" />
-          <span className="absolute bottom-16 right-16 w-2 h-2 rounded-full bg-[#90E4A1]/80 animate-ping" />
-          <span className="absolute top-1/2 right-4 w-3.5 h-3.5 rounded-full bg-green-dark/70 animate-pulse" />
+          <span className="absolute top-[12%] left-[45%] w-3 h-3 rounded-full bg-[#35694D]/20" />
+          <span className="absolute top-[45%] left-[8%] w-3 h-3 rounded-full bg-[#35694D]/20" />
+          <span className="absolute bottom-[28%] right-[8%] w-3 h-3 rounded-full bg-[#35694D]/20" />
+          <span className="absolute bottom-[8%] left-[45%] w-3 h-3 rounded-full bg-[#35694D]/20" />
 
-          {/* Main Card */}
+          {/* Main Card (center-right, top: 30%) */}
           <motion.div
             animate={{ y: [-10, 10, -10] }}
             transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-            className="relative z-10 w-full max-w-sm bg-white rounded-2xl shadow-xl border border-subtle p-6"
+            className="absolute top-[30%] left-[50%] -translate-x-1/2 md:left-auto md:translate-x-0 md:right-[5%] lg:right-[10%] z-10 w-[90%] sm:w-full max-w-sm bg-white rounded-2xl shadow-xl border border-subtle p-6"
           >
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-subtle rounded-xl flex items-center justify-center text-green-dark">
@@ -160,7 +186,7 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Card 2 - Top Right */}
+          {/* Card 2 - Project Delivered (top: 8%, right: 0%) */}
           <motion.div
             animate={{ y: [10, -10, 10] }}
             transition={{
@@ -169,22 +195,22 @@ export default function Hero() {
               repeat: Infinity,
               ease: 'easeInOut',
             }}
-            className="absolute -top-4 -right-2 md:-right-8 bg-white rounded-xl shadow-lg border border-subtle p-4 flex items-center gap-3 z-20 w-[180px] md:w-[200px]"
+            className="absolute top-[8%] right-0 bg-white rounded-xl shadow-md border border-subtle p-2.5 flex items-center gap-2 z-20 w-[150px] md:w-[170px]"
           >
-            <div className="w-8 h-8 rounded-lg bg-[#90E4A1]/20 flex items-center justify-center text-green-dark shrink-0">
-              <CheckCircle className="w-5 h-5" />
+            <div className="w-6 h-6 rounded-lg bg-[#90E4A1]/20 flex items-center justify-center text-green-dark shrink-0">
+              <CheckCircle className="w-4 h-4" />
             </div>
             <div>
-              <div className="font-semibold text-charcoal text-xs md:text-sm leading-tight">
+              <div className="font-semibold text-charcoal text-[11px] md:text-xs leading-tight">
                 Project Delivered
               </div>
-              <div className="text-gray-400 text-[10px] md:text-xs mt-0.5">
+              <div className="text-gray-400 text-[9px] md:text-[10px] mt-0.5">
                 Zalvro Realty
               </div>
             </div>
           </motion.div>
 
-          {/* Card 3 - Bottom Left */}
+          {/* Card 3 - AI Powered (bottom: 15%, left: 5%) */}
           <motion.div
             animate={{ y: [-10, 10, -10] }}
             transition={{
@@ -193,7 +219,7 @@ export default function Hero() {
               repeat: Infinity,
               ease: 'easeInOut',
             }}
-            className="absolute -bottom-4 -left-2 md:-left-8 bg-green-dark rounded-xl shadow-lg p-4 flex items-center gap-3 z-20 w-[180px] md:w-[200px]"
+            className="absolute bottom-[15%] left-[5%] bg-green-dark rounded-xl shadow-lg p-4 flex items-center gap-3 z-20 w-[180px] md:w-[200px]"
           >
             <div className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center text-white shrink-0">
               <Zap className="w-5 h-5" />
@@ -204,6 +230,54 @@ export default function Hero() {
               </div>
               <div className="text-[#90E4A1] text-[10px] md:text-xs mt-0.5">
                 Smart Solutions
+              </div>
+            </div>
+          </motion.div>
+
+          {/* New Card 4 - Happy Clients (top: 0%, left: 10%) */}
+          <motion.div
+            animate={{ y: [8, -8, 8] }}
+            transition={{
+              duration: 3,
+              delay: 0.3,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+            className="absolute top-[0%] left-[10%] bg-white rounded-2xl shadow-md border border-subtle p-3 flex items-center gap-2 z-20"
+          >
+            <div className="w-8 h-8 rounded-lg bg-[#90E4A1]/20 flex items-center justify-center text-green-dark shrink-0">
+              <Users className="w-4 h-4 text-green-dark" />
+            </div>
+            <div>
+              <div className="font-semibold text-charcoal text-sm leading-tight">
+                Happy Clients
+              </div>
+              <div className="text-gray-400 text-xs mt-0.5">
+                100% Satisfaction
+              </div>
+            </div>
+          </motion.div>
+
+          {/* New Card 5 - Global Reach (bottom: 5%, right: 0%) */}
+          <motion.div
+            animate={{ y: [-8, 8, -8] }}
+            transition={{
+              duration: 3,
+              delay: 0.7,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+            className="absolute bottom-[5%] right-[0%] bg-white rounded-2xl shadow-md border border-subtle p-3 flex items-center gap-2 z-20"
+          >
+            <div className="w-8 h-8 rounded-lg bg-[#90E4A1]/20 flex items-center justify-center text-green-dark shrink-0">
+              <Globe className="w-4 h-4 text-green-dark" />
+            </div>
+            <div>
+              <div className="font-semibold text-charcoal text-sm leading-tight">
+                Global Reach
+              </div>
+              <div className="text-gray-400 text-xs mt-0.5">
+                15+ Countries
               </div>
             </div>
           </motion.div>

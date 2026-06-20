@@ -70,7 +70,7 @@ export default function WhyUs() {
   ]
 
   return (
-    <section ref={sectionRef} className="bg-subtle py-20 px-4">
+    <section ref={sectionRef} className="bg-subtle py-10 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
