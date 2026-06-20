@@ -60,8 +60,8 @@ export default function Navbar() {
             <Code className="w-5 h-5" />
           </div>
           <span className="flex text-xl font-bold tracking-tight">
-            <span className="text-charcoal">Tech</span>
-            <span className="text-green-dark">Builds</span>
+            <span className="text-charcoal">Zal</span>
+            <span className="text-green-dark">Vro</span>
           </span>
         </Link>
 

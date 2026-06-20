@@ -129,7 +129,7 @@ export default function About() {
 
             <blockquote className="mt-6 italic text-gray-500 text-sm leading-relaxed">
               "I believe every business deserves a powerful online presence.
-              That's why I started TechBuilds."
+              That's why I started Zalvro."
             </blockquote>
           </motion.div>
         </motion.div>
@@ -147,12 +147,12 @@ export default function About() {
             OUR STORY
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal mt-4">
-            Why <span className="text-green-dark">TechBuilds</span> Exists
+            Why <span className="text-green-dark">Zalvro</span> Exists
           </h2>
 
           <div className="flex flex-col gap-6 mt-8 text-left max-w-2xl mx-auto text-gray-500 text-base leading-relaxed">
             <p>
-              TechBuilds was born from a simple observation — thousands of
+              Zalvro was born from a simple observation — thousands of
               businesses worldwide have no online presence, and they're losing
               customers every single day because of it.
             </p>

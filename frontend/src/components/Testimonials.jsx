@@ -9,7 +9,7 @@ export default function Testimonials() {
   const testimonials = [
     {
       stars: 5,
-      quote: 'TechBuilds transformed our online presence completely. The website looks stunning and works perfectly.',
+      quote: 'Zalvro transformed our online presence completely. The website looks stunning and works perfectly.',
       initials: 'MT',
       name: 'Michael Thompson',
       location: 'Sydney, Australia',

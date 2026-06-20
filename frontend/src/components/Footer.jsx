@@ -114,7 +114,7 @@ export default function Footer() {
               <LinkedinIcon className="w-4 h-4" />
             </button>
             <button
-              onClick={() => handleSocialClick('https://techbuilds.dev')}
+              onClick={() => handleSocialClick('https://Zalvro.dev')}
               className="border border-gray-600 rounded-lg p-2 hover:border-green-dark text-gray-400 hover:text-green-light transition-all focus:outline-none"
               aria-label="Website"
             >
@@ -176,8 +176,8 @@ export default function Footer() {
           <div className="flex flex-col gap-3">
             <div className="text-gray-400 text-sm flex items-center gap-2">
               <Mail className="w-4 h-4 text-green-light shrink-0" />
-              <a href="mailto:hello@techbuilds.dev" className="hover:underline">
-                hello@techbuilds.dev
+              <a href="mailto:hello@Zalvro.dev" className="hover:underline">
+                hello@Zalvro.dev
               </a>
             </div>
             <div
@@ -203,7 +203,7 @@ export default function Footer() {
       {/* Bottom Footer */}
       <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
         <p className="text-gray-400 text-sm">
-          &copy; 2025 TechBuilds. All rights reserved.
+          &copy; 2025 Zalvro. All rights reserved.
         </p>
       </div>
     </footer>

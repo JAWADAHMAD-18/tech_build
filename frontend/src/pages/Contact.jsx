@@ -88,10 +88,10 @@ export default function Contact() {
                 <div>
                   <h4 className="font-semibold text-charcoal text-sm">Email Us</h4>
                   <a
-                    href="mailto:hello@techbuilds.dev"
+                    href="mailto:hello@Zalvro.dev"
                     className="text-gray-500 text-sm mt-0.5 hover:underline"
                   >
-                    hello@techbuilds.dev
+                    hello@Zalvro.dev
                   </a>
                 </div>
               </div>

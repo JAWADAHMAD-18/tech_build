@@ -75,7 +75,7 @@ export default function WhyUs() {
         {/* Header */}
         <div className="text-center mb-16">
           <span className="inline-block bg-white rounded-full px-4 py-1.5 text-sm text-green-dark font-medium shadow-sm">
-            WHY TECHBUILDS
+            WHY Zalvro
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-charcoal mt-4">
             Why Clients <span className="text-green-dark">Choose Us</span>
@@ -149,7 +149,7 @@ export default function WhyUs() {
             <div className="w-full h-px bg-subtle my-6" />
 
             <blockquote className="italic text-gray-500 text-sm text-center leading-relaxed">
-              "TechBuilds delivered our website in just 10 days. Absolutely
+              "Zalvro delivered our website in just 10 days. Absolutely
               professional work."
               <cite className="block not-italic font-medium text-charcoal mt-2 text-xs">
                 — Michael T., Sydney

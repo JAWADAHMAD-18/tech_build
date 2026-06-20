@@ -31,8 +31,8 @@ export default function Hero() {
   }
 
   return (
-    <section className="min-h-screen w-full bg-cream flex items-center pt-6 overflow-x-hidden">
-      <div className="max-w-7xl mx-auto px-6 py-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="min-h-screen w-full bg-cream flex items-center pt-4 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-6 py-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Column */}
         <div className="flex flex-col items-start text-left">
           {/* Top Badge */}
@@ -143,7 +143,7 @@ export default function Hero() {
                 <Code className="w-8 h-8" />
               </div>
               <div>
-                <h3 className="font-bold text-charcoal text-lg">TechBuilds</h3>
+                <h3 className="font-bold text-charcoal text-lg">Zalvro</h3>
                 <p className="text-gray-500 text-sm">Full Stack Agency</p>
               </div>
             </div>
@@ -179,7 +179,7 @@ export default function Hero() {
                 Project Delivered
               </div>
               <div className="text-gray-400 text-[10px] md:text-xs mt-0.5">
-                TechBuild Realty
+                Zalvro Realty
               </div>
             </div>
           </motion.div>
