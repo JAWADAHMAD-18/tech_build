@@ -6,7 +6,7 @@ export const projects = [
     description: "Premium real estate platform with AI-powered property assistant, advanced search filters and Google Maps integration.",
     stack: ["React", "Node.js", "MongoDB", "Gemini AI", "Tailwind CSS"],
     image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
-    liveUrl: "https://techbuild-realty.vercel.app",
+    liveUrl: "https://real-estate-aus.vercel.app/",
     featured: true
   },
   {

@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Code } from 'lucide-react'
+import { Menu, X, Code, Code2, ChevronRight } from 'lucide-react'
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const location = useLocation()
   const navigate = useNavigate()
@@ -37,7 +37,7 @@ export default function Navbar() {
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
-    if (isOpen) {
+    if (isMenuOpen) {
       document.body.style.overflow = 'hidden'
     } else {
       document.body.style.overflow = 'unset'
@@ -45,7 +45,12 @@ export default function Navbar() {
     return () => {
       document.body.style.overflow = 'unset'
     }
-  }, [isOpen])
+  }, [isMenuOpen])
+
+  // Automatically close menu when location changes (route/back button)
+  useEffect(() => {
+    setIsMenuOpen(false)
+  }, [location.pathname])
 
   return (
     <header
@@ -66,7 +71,7 @@ export default function Navbar() {
         </Link>
 
         {/* Right - Desktop Links */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.path}
@@ -97,8 +102,8 @@ export default function Navbar() {
 
         {/* Mobile menu trigger */}
         <button
-          onClick={() => setIsOpen(true)}
-          className="p-2 -mr-2 text-charcoal md:hidden hover:bg-subtle rounded-lg transition-colors"
+          onClick={() => setIsMenuOpen(true)}
+          className="p-2 -mr-2 text-charcoal lg:hidden hover:bg-subtle rounded-lg transition-colors"
           aria-label="Toggle menu"
         >
           <Menu className="w-6 h-6" />
@@ -107,50 +112,83 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ y: '-100%' }}
-            animate={{ y: 0 }}
-            exit={{ y: '-100%' }}
-            transition={{ type: 'tween', duration: 0.35, ease: 'easeInOut' }}
-            className="fixed inset-0 z-50 bg-white flex flex-col items-center justify-center p-6"
-          >
-            {/* Close button top right */}
-            <button
-              onClick={() => setIsOpen(false)}
-              className="absolute top-6 right-6 p-2 text-green-dark hover:bg-subtle rounded-full transition-colors"
-              aria-label="Close menu"
-            >
-              <X className="w-8 h-8" />
-            </button>
+        {isMenuOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={() => setIsMenuOpen(false)}
+              className="fixed inset-0 z-[99] bg-black/40 w-screen h-screen"
+            />
 
-            {/* Menu links centered */}
-            <nav className="flex flex-col items-center gap-8 w-full max-w-sm">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`text-2xl font-bold transition-colors py-2 w-full text-center ${
-                    isActiveRoute(link.path)
-                      ? 'text-green-dark'
-                      : 'text-charcoal hover:text-green-dark'
-                  }`}
+            {/* Menu Panel */}
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'tween', duration: 0.3 }}
+              className="fixed top-0 right-0 z-[100] w-[75vw] h-screen bg-white shadow-[-4px_0_20px_rgba(0,0,0,0.1)] flex flex-col"
+            >
+              {/* Top Row */}
+              <div className="flex justify-between items-center p-6 border-b border-gray-100">
+                {/* Logo (small) */}
+                <div className="flex items-center gap-2">
+                  <Code2 className="w-5 h-5 text-green-dark" />
+                  <span className="flex text-lg font-bold tracking-tight">
+                    <span className="text-charcoal">Zal</span>
+                    <span className="text-green-dark">vro</span>
+                  </span>
+                </div>
+
+                {/* X button */}
+                <button
+                  onClick={() => setIsMenuOpen(false)}
+                  className="bg-[#F0EDE8] rounded-full p-2 text-green-dark hover:opacity-90 transition-opacity flex items-center justify-center"
+                  aria-label="Close menu"
                 >
-                  {link.name}
-                </Link>
-              ))}
-              <button
-                onClick={() => {
-                  setIsOpen(false)
-                  navigate('/contact')
-                }}
-                className="mt-6 w-full bg-green-dark text-white rounded-xl py-3 text-lg font-medium transition-colors hover:bg-[#2a5a40] shadow-md"
-              >
-                Get Started
-              </button>
-            </nav>
-          </motion.div>
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Nav Links */}
+              <nav className="mt-8 px-6 flex-1 overflow-y-auto pb-36">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`block py-4 border-b border-gray-100 flex justify-between items-center transition-colors text-xl font-semibold ${
+                      isActiveRoute(link.path)
+                        ? 'text-green-dark'
+                        : 'text-charcoal hover:text-green-dark'
+                    }`}
+                  >
+                    <span>{link.name}</span>
+                    <ChevronRight className="w-5 h-5 text-gray-400" />
+                  </Link>
+                ))}
+              </nav>
+
+              {/* Bottom Section */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-100 bg-white">
+                <button
+                  onClick={() => {
+                    setIsMenuOpen(false)
+                    navigate('/contact')
+                  }}
+                  className="w-full bg-[#35694D] text-white rounded-xl py-3 font-semibold hover:opacity-95 transition-opacity"
+                >
+                  Get Started
+                </button>
+                <p className="text-center text-xs text-gray-400 mt-3">
+                  zalvrohq.com
+                </p>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>
