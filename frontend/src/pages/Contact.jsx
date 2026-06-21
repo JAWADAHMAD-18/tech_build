@@ -107,7 +107,7 @@ export default function Contact() {
                 <div>
                   <h4 className="font-semibold text-charcoal text-sm">WhatsApp</h4>
                   <span className="text-gray-500 text-sm mt-0.5 hover:underline">
-                    +92 303 7741461
+                    +92 303 9245454
                   </span>
                 </div>
               </div>

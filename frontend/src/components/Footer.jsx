@@ -187,7 +187,7 @@ export default function Footer() {
               className="text-gray-400 text-sm flex items-center gap-2 cursor-pointer hover:text-green-light transition-colors"
             >
               <MessageCircle className="w-4 h-4 text-green-light shrink-0" />
-              <span>+92 303 7741461</span>
+              <span>+92 303 9245454</span>
             </div>
             <div className="text-gray-400 text-sm flex items-center gap-2">
               <Globe className="w-4 h-4 text-green-light shrink-0" />
