@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
-import { ExternalLink } from 'lucide-react'
+import { ExternalLink, Play } from 'lucide-react'
 import { projects } from '../data/projects'
 
 export default function Portfolio() {
@@ -58,7 +58,15 @@ export default function Portfolio() {
               {/* Image Section */}
               <div className="relative h-56 w-full overflow-hidden bg-subtle">
                 {/* Category Badge */}
-                <span className="absolute top-0 left-0 z-20 bg-green-dark text-white text-xs rounded-full px-3 py-1 m-4 font-semibold shadow-sm">
+                <span className={`absolute top-0 left-0 z-20 text-white text-xs rounded-full px-3 py-1 m-4 font-semibold shadow-sm ${
+                  project.category === 'Full Stack + AI'
+                    ? 'bg-green-dark'
+                    : project.category === 'AI Automation'
+                    ? 'bg-[#3B6FD4]'
+                    : project.category === 'AI Voice Agent'
+                    ? 'bg-[#7C3AED]'
+                    : 'bg-green-dark'
+                }`}>
                   {project.category}
                 </span>
 
@@ -107,14 +115,27 @@ export default function Portfolio() {
 
                 {/* Card Action Row */}
                 <div className="mt-6 flex justify-between items-center pt-4 border-t border-subtle">
-                  <button
-                    onClick={() =>
-                      window.open(project.liveUrl, '_blank', 'noopener,noreferrer')
-                    }
-                    className="text-green-dark font-semibold text-sm hover:underline transition-all"
-                  >
-                    View Live &rarr;
-                  </button>
+                  <div className="flex items-center gap-3">
+                    <button
+                      onClick={() =>
+                        window.open(project.liveUrl, '_blank', 'noopener,noreferrer')
+                      }
+                      className="text-green-dark font-semibold text-sm hover:underline transition-all"
+                    >
+                      View Live &rarr;
+                    </button>
+                    {project.demoVideo && project.demoVideo !== '#' && (
+                      <button
+                        onClick={() =>
+                          window.open(project.demoVideo, '_blank', 'noopener,noreferrer')
+                        }
+                        className="bg-[#F0EDE8] text-green-dark text-xs rounded-lg px-3 py-1 font-semibold flex items-center gap-1 hover:bg-[#e4e0d8] transition-all"
+                      >
+                        <Play size={10} fill="currentColor" />
+                        Watch Demo
+                      </button>
+                    )}
+                  </div>
                   <ExternalLink className="text-green-dark" size={16} />
                 </div>
               </div>

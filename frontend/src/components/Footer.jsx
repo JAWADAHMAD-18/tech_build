@@ -114,7 +114,7 @@ export default function Footer() {
               <LinkedinIcon className="w-4 h-4" />
             </button>
             <button
-              onClick={() => handleSocialClick('https://Zalvro.com')}
+              onClick={() => handleSocialClick('https://Zalvrohq.com')}
               className="border border-gray-600 rounded-lg p-2 hover:border-green-dark text-gray-400 hover:text-green-light transition-all focus:outline-none"
               aria-label="Website"
             >
@@ -182,7 +182,7 @@ export default function Footer() {
             </div>
             <div
               onClick={() =>
-                window.open('https://wa.me/923037741461', '_blank', 'noopener,noreferrer')
+                window.open('https://wa.me/923039245454', '_blank', 'noopener,noreferrer')
               }
               className="text-gray-400 text-sm flex items-center gap-2 cursor-pointer hover:text-green-light transition-colors"
             >

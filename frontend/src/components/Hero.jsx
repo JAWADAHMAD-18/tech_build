@@ -141,7 +141,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="mt-10 flex items-center gap-4 lg:gap-8 border-t border-subtle pt-6 w-full"
+            className="mt-10 flex items-center gap-4 lg:gap-8 border-t border-subtle pt-6 w-full flex-wrap"
           >
             <div>
               <div className="font-bold text-2xl md:text-3xl text-green-dark">50+</div>
@@ -156,6 +156,11 @@ export default function Hero() {
             <div>
               <div className="font-bold text-2xl md:text-3xl text-green-dark">100%</div>
               <div className="text-sm text-gray-500 mt-1">Satisfaction</div>
+            </div>
+            <div className="h-8 w-px bg-subtle" />
+            <div>
+              <div className="font-bold text-2xl md:text-3xl text-green-dark">AI</div>
+              <div className="text-sm text-gray-500 mt-1">Powered</div>
             </div>
           </motion.div>
         </div>

@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Code2, RefreshCw, Bot, Zap } from 'lucide-react'
+import { Code2, RefreshCw, Bot, Zap, Workflow, Mic } from 'lucide-react'
 
 export default function Services() {
   const navigate = useNavigate()
@@ -24,11 +24,18 @@ export default function Services() {
       desc: 'Add intelligent features to your website — chatbots, recommendation engines, smart search and automated customer support powered by AI.',
       tags: ['Chatbots', 'Automation', 'Smart Search', 'GPT/Gemini'],
     },
+    
     {
-      icon: Zap,
-      title: 'AI Automation',
-      desc: 'Automate repetitive business tasks and workflows using AI — save time, reduce errors and focus on what matters most.',
-      tags: ['Workflows', 'n8n', 'Zapier', 'Custom Bots'],
+      icon: Workflow,
+      title: 'AI Automation & Workflows',
+      desc: 'Automate your entire business pipeline — from lead capture to follow-up emails, CRM updates and Slack alerts using n8n and AI.',
+      tags: ['n8n', 'Zapier', 'Groq AI', 'Google Sheets', 'Webhooks'],
+    },
+    {
+      icon: Mic,
+      title: 'AI Voice Receptionist',
+      desc: '24/7 AI voice agent that answers calls, collects patient/client info and automatically triggers your backend workflows.',
+      tags: ['VAPI', 'ElevenLabs', 'n8n', 'Groq AI', 'Voice AI'],
     },
   ]
 
@@ -63,7 +70,7 @@ export default function Services() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {servicesData.map((service, index) => {
             const IconComponent = service.icon
             return (

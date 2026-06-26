@@ -18,5 +18,27 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800",
     liveUrl: "https://tripfusion.vercel.app",
     featured: true
+  },
+  {
+    id: 3,
+    title: "Clinic Lead Automation",
+    category: "AI Automation",
+    description: "Full automation pipeline for a medical clinic — voice agent collects patient data, AI writes personalized emails, Google Sheets updates automatically and Slack alerts clinic owner instantly.",
+    stack: ["n8n", "Groq AI", "Google Sheets", "Gmail SMTP", "Slack", "Webhooks"],
+    image: "/frontend/public/n8n.jpeg",
+    liveUrl: "#",
+    demoVideo: "https://drive.google.com/file/d/1bZFApV_LVfz_MGQCJhSe-NH5kV-bl2If/view?usp=sharing",
+    featured: true
+  },
+  {
+    id: 4,
+    title: "AI Voice Receptionist — Ahmed",
+    category: "AI Voice Agent",
+    description: "24/7 AI voice receptionist that handles incoming calls, collects appointment details and triggers automated n8n workflow for email confirmation and CRM updates.",
+    stack: ["VAPI", "ElevenLabs", "Groq AI", "n8n", "Llama 3.3 70B"],
+    image: "https://images.unsplash.com/photo-1589254065878-42efea3c5f01?w=800",
+    liveUrl: "#",
+    demoVideo: "https://drive.google.com/file/d/1bZFApV_LVfz_MGQCJhSe-NH5kV-bl2If/view?usp=sharing",
+    featured: true
   }
 ]

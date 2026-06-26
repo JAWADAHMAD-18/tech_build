@@ -50,7 +50,7 @@ export default function WhyUs() {
     {
       num: '1',
       title: 'Solo + AI Power',
-      desc: 'One dedicated developer using cutting-edge AI tools to deliver agency-quality work at freelancer prices.',
+      desc: 'One dedicated developer using n8n automation, voice AI and cutting-edge tools to deliver agency-quality work at freelancer prices.',
     },
     {
       num: '2',
