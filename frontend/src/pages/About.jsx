@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { Code2, Zap, Shield, TrendingUp } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
 
 export default function About() {
   const heroRef = useRef(null)
@@ -45,6 +46,12 @@ export default function About() {
 
   return (
     <main className="overflow-x-hidden bg-cream">
+      <Helmet>
+        <title>About Zalvro | Lean, AI-Powered Digital Agency</title>
+        <meta name="description" content="Learn about Zalvro, a developer-led, AI-powered digital agency delivering world-class web development and automation solutions for global clients." />
+        <link rel="canonical" href="https://zalvrohq.com/about" />
+        <meta property="og:url" content="https://zalvrohq.com/about" />
+      </Helmet>
       {/* SECTION 1 — HERO */}
       <section ref={heroRef} className="py-10 bg-subtle px-6">
         <motion.div

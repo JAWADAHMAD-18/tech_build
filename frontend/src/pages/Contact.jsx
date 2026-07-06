@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import { Mail, MessageCircle, Globe } from 'lucide-react'
 
@@ -43,6 +44,12 @@ export default function Contact() {
 
   return (
     <main className="overflow-x-hidden bg-cream">
+      <Helmet>
+        <title>Contact Zalvro | Start Your Web or AI Automation Project</title>
+        <meta name="description" content="Get in touch with Zalvro. Let's discuss your next custom website, AI voice receptionist, or lead automation project. We respond within 24 hours." />
+        <link rel="canonical" href="https://zalvrohq.com/contact" />
+        <meta property="og:url" content="https://zalvrohq.com/contact" />
+      </Helmet>
       {/* SECTION 1 — HEADER */}
       <section className="py-10 bg-subtle px-6">
         <motion.div
