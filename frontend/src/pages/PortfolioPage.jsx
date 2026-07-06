@@ -7,8 +7,8 @@ export default function PortfolioPage() {
       <Helmet>
         <title>Our Portfolio | Featured Web & AI Automation Projects | Zalvro</title>
         <meta name="description" content="Browse featured web development and AI automation projects by Zalvro. See how we help small businesses and clinics optimize their operations." />
-        <link rel="canonical" href="https://zalvrohq.com/projects" />
-        <meta property="og:url" content="https://zalvrohq.com/projects" />
+        <link rel="canonical" href="https://zalvrohq.com/portfolio" />
+        <meta property="og:url" content="https://zalvrohq.com/portfolio" />
       </Helmet>
       <Portfolio />
     </main>
