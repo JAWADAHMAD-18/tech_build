@@ -98,7 +98,7 @@ export default function Contact() {
                     href="mailto:contact@Zalvro.com"
                     className="text-gray-500 text-sm mt-0.5 hover:underline"
                   >
-                    hello@Zalvro.dev
+                    contact@zalvrohq.com
                   </a>
                 </div>
               </div>
