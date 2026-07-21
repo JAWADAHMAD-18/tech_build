@@ -21,8 +21,13 @@ export default defineConfig({
         timeout: 45000,
         // Block 3rd-party requests (Clarity, GA) so networkidle0 isn't held open by beacons
         skipThirdPartyRequests: true,
+        // Configure launch arguments to prevent Chromium launch timeouts
+        launchOptions: {
+          args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
+          dumpio: true
+        }
         // Note: navigationOptions.waitUntil fails schema validation in this package version
-        // (upstream schema bug: base type is 'null'). skipThirdPartyRequests is the real fix —
+        // (upstream schema bug: base type is 'disable'). skipThirdPartyRequests is the real fix —
         // it blocks GA/Clarity beacons so networkidle0 doesn't hang indefinitely.
       },
     }),

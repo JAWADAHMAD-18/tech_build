@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import WhatsAppBtn from './components/WhatsAppBtn'
 import ScrollToTop from './components/ScrollToTop'
+import AizaChatbot from './components/AizaChatbot'
 
 // Lazy load all pages
 const Home = lazy(() => import('./pages/Home'))
@@ -39,6 +40,7 @@ function App() {
         </Suspense>
         <Footer />
         <WhatsAppBtn />
+        <AizaChatbot />
       </div>
     </Router>
   )
