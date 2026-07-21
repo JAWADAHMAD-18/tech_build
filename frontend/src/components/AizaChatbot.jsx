@@ -228,7 +228,7 @@ export default function AizaChatbot() {
 
     try {
       // Configurable API URL via environment variables
-      const apiEndpoint = import.meta.env.VITE_CHATBOT_API_URL || 'http://localhost:5000/api/chat';
+      const apiEndpoint = import.meta.env.VITE_API_URL  || 'http://localhost:5000/api/chat';
       
       const response = await fetch(apiEndpoint, {
         method: 'POST',
