@@ -154,7 +154,7 @@ const parseMarkdown = (text) => {
 const DEFAULT_WELCOME_MESSAGE = {
   id: 'welcome',
   sender: 'bot',
-  text: `**Welcome to Zalvro!** I'm Zia, your AI automation assistant.
+  text: `**Welcome to Zalvro!** I'm Aiza, your AI automation assistant.
 
 I can help you with:
 - Reviewing our bespoke AI automation workflows
@@ -304,7 +304,7 @@ export default function AizaChatbot() {
               transition={{ duration: 0.2 }}
               className="absolute right-full mr-3 bg-charcoal text-cream text-xs font-semibold rounded-lg px-3 py-2 whitespace-nowrap shadow-lg pointer-events-none select-none border border-subtle/20"
             >
-              Ask Zia
+              Ask Aiza
             </motion.div>
           )}
         </AnimatePresence>
@@ -373,7 +373,7 @@ export default function AizaChatbot() {
                 </div>
                 <div>
                   <h3 className="text-sm font-bold text-cream flex items-center gap-1.5 leading-none">
-                    Zia
+                    Aiza
                     <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 bg-green-dark/60 text-green-light rounded font-medium scale-90 origin-left">
                       AI Agent
                     </span>
